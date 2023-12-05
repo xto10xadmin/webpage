@@ -265,14 +265,14 @@ p {
 
 /* Style */
 .header {
-  padding: 10px 0;
-  background-color: #fff;
-}
+    padding: 0px 0;
+    background-color: #fff;
+  }
 .header .navbar-nav {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .header .nav-item a {
-  color: #595959;
+  color: #000000;
   font-size: 16px;
   font-family: Roboto-Bold;
   padding: 0 20px;
@@ -321,16 +321,12 @@ p {
   font-size: 18px;
   margin-top: 20px;
 }
-
-
-
-
 .home-about-section {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 .home-about-section p {
-  color: #333333;
+  color: #000000;
   font-size: 28px;
 }
 
@@ -863,23 +859,26 @@ p {
   margin-top: 20px;
 }
 
+.key-features-section {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .key-features-section .col-box-outer {
   margin-top: 60px;
 }
-.key-features-section {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
 .key-features-section .logo-box {
-  max-width: 380px;
-  height: 250px;
-  background: #FAFCFD;
-  border: 2px solid #F1F1F1;
+  max-width: 100px;
+  height: auto;
+  background: #fff;
   transition: all 0.3s ease-in-out;
-  padding-top: 20px;
+  padding-top: 0px;
 }
-.key-features-section .logo-box:hover {
-  border: 2px #14A086 solid;
+.key-features-section .logo-box-white {
+  max-width: 200px;
+  height: auto;
+  background: transparent
+  transition: all 0.3s ease-in-out;
+  padding-top: 0px;
 }
 .key-features-section h3 {
   font-family: Roboto-Bold;
@@ -1031,24 +1030,8 @@ p {
 
 
 /* media querry */
-@media (max-width: 1800px) {
-  .key-features-section .icon-box img {
-    max-width: 190px;
-    max-height: 80px;
-  }
-  .project-timeline-section .date {
-    font-size: 18px;
-  }
-  .project-timeline-section .logo-caption {
-    font-size: 18px;
-  }
-  .big-font {
-    font-size: 120px;
-  }
-  
-}
 
-@media (max-width: 1600px) {
+@media (min-width: 1440px) {
   h1 {
     font-size: 38px;
   }
@@ -1109,8 +1092,10 @@ p {
     min-height: 100px;
   }
   .key-features-section .logo-box {
-    max-width: 380px;
-    height: 200px;
+    width: 100%;  
+  }
+  .key-features-section .logo-box-white {
+    width: 100%;  
   }
   .project-timeline-section .col-box-outer img {
     max-width: 200px;
@@ -1120,7 +1105,7 @@ p {
   }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1320px) and (max-width: 1439.98px) {
   h2 {
     font-size: 30px;
   }
@@ -1222,6 +1207,12 @@ p {
   .three-col-icon-section .bottom-text h4 {
     font-size: 24px;
   }
+  .project-timeline-section .date {
+    font-size: 14px;
+  }
+  .about-section h2 {
+    font-size: 24px;
+  }
   .key-features-section .icon-box img {
     max-width: 160px;
     max-height: 70px;
@@ -1229,14 +1220,11 @@ p {
   .key-features-section h3 {
     margin-top: 16px;
   }
-  .project-timeline-section .date {
-    font-size: 14px;
-  }
-  .about-section h2 {
-    font-size: 24px;
-  }
   .key-features-section .logo-box {
-    height: 180px;
+    width: 95%;
+  }
+  .key-features-section .logo-box-white {
+    width: 95%;  
   }
   .key-features-section .icon-box {
     min-height: 80px;
@@ -1261,7 +1249,7 @@ p {
   }
 }
 
-@media (max-width: 1320px) {
+@media (min-width: 1200px) and (max-width: 1319.98px) {
   h1 {
     font-size: 28px;
   }
@@ -1363,6 +1351,12 @@ p {
   .project-timeline-section .date {
     font-size: 12px;
   }
+  .key-features-section .logo-box {
+    width: 87.5%;
+  }
+  .key-features-section .logo-box-white {
+    width: 87.5%;  
+  }
   .three-col-icon-section p {
     font-size: 14px;
   }
@@ -1375,7 +1369,7 @@ p {
 
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 991px) and (max-width: 1199.98px) {
   .container {
     padding: 0 40px;
   }
@@ -1417,10 +1411,16 @@ p {
   .milestone-section .heading {
     flex-basis: 35%;
   }
+  .key-features-section .logo-box {
+    width: 76%;
+  }
+  .key-features-section .logo-box-white {
+    width: 76%;  
+  }
 }
 
 
-@media (max-width: 991px) {
+@media (min-width: 767px) and (max-width: 990.98px) {
   .container {
     padding: 0 30px;
   }
@@ -1525,9 +1525,15 @@ p {
   .heading-section h3 {
     font-size: 22px;
   }
+  .key-features-section .logo-box {
+    width: 73%;
+  }
+  .key-features-section .logo-box-white {
+    width: 73%;  
+  }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 766.98px) {
   h1 {
     font-size: 22px;
   }
@@ -1694,9 +1700,6 @@ p {
   .three-col-icon-section .bottom-text h4 {
     font-size: 18px;
   }
-  .key-features-section .logo-box {
-    height: 160px;
-  }
   .key-features-section {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1704,15 +1707,21 @@ p {
   .key-features-section .col-box-outer {
     margin-top: 30px;
   }
-  .swot-section h3 {
-    font-size: 18px;
+  .key-features-section .logo-box {
+    width: 46%;
   }
-  .three-col-icon-section .bottom-text {
-    margin-top: 20px;
+  .key-features-section .logo-box-white {
+    width: 46%;  
   }
   .key-features-section .icon-box img {
     max-width: 140px;
     max-height: 40px;
+  }
+    .swot-section h3 {
+    font-size: 18px;
+  }
+  .three-col-icon-section .bottom-text {
+    margin-top: 20px;
   }
   .project-timeline-section .col-box-outer img {
     max-width: 140px;
@@ -1780,4 +1789,18 @@ p {
   .content-border-box {
     font-size: 20px;
   }
+}
+
+@media (max-width: 576px) {
+
+  .content-border-box {
+    font-size: 20px;
+  }
+  .key-features-section .logo-box {
+    width: 40%;
+  }
+  .key-features-section .logo-box-white {
+    width: 40%;
+  }
+
 }
