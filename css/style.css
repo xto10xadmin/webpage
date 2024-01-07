@@ -13,39 +13,76 @@
   src: url('../fonts/Roboto/Roboto-Bold.ttf'); 
 }
 
-  
+
 body {
   font-family: Roboto-Regular;
 }
-.container {
-  max-width: 1920px;
-  width: 100%;
-  margin: auto;
-  padding: 0 66px;
+h1 {
+  font-size: 2.5rem;
+  font-family: Roboto-Bold;
+  line-height: 1.5em;
+}
+h2 {
+  font-size: 2rem;
+  font-family: Roboto-Bold;
+  line-height: 1.5em;
+}
+h3 {
+  font-size: 1.5rem;
+  font-family: Roboto-Medium;
+  line-height: 1.5em;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+a {
+  font-size: 1rem;
 }
 img {
   max-width: 100%;
 }
-.width-1300 {
-  max-width: 1300px;
+.padding-left {
+  padding-left: 66px;
 }
-.width-1400 {
-  max-width: 1400px;
+.padding-right {
+  padding-right: 66px;
 }
-h1 {
-  font-size: 48px;
-  font-family: Roboto-Bold;
+.padding-top {
+  padding-top: 66px;
 }
-h2 {
-  font-size: 36px;
-  font-family: Roboto-Bold;
-  position: relative;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+.padding-top-half {
+  padding-top: 33px;
 }
-h3 {
-  font-size: 18px;
-  font-family: Roboto-Medium;
+.padding-bottom {
+  padding-bottom: 66px;
+}
+.padding-bottom-half {
+  padding-bottom: 33px;
+}
+.padding-l-para  {
+  padding-left: 1em;  
+}
+.padding-r-para {
+  padding-right: 1em;
+}
+.padding-t-para {
+  padding-top: .5em;
+}
+.padding-b-para {
+  padding-bottom: .5em;
+}
+.padding-l-90 {
+  padding-left: 90px;
+}
+.padding-l-40 {
+  padding-left: 40px;
+}
+.padding-r-90 {
+  padding-right: 90px;
+}
+.bdr {
+  position:relative;
 }
 .bdr::after {
   content: "";
@@ -55,21 +92,24 @@ h3 {
   background-color: #000000;
   width: 80px;
   height: 3px;
+  z-index:999;
 }
 .bdr-center::after {
   right: 0;
   margin: auto;
 }
-p {
-  font-size: 16px;
-}
 .green-btn {
   background: #14A086;
-  padding: 15px 26px;
+  padding: 1em;
   color: #ffff;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  font-size: 14px;
+  font-size: 1rem;
+  align-items: center;
+}
+.green-btn.fixed {
+  width: 150px;
+  height: auto;
 }
 .green-btn:hover {
   color: #ffff;
@@ -77,15 +117,20 @@ p {
 }
 .white-btn {
   background: #fff;
-  padding: 15px 26px;
-  color: #666666;
+  padding: 1em;
+  color: #000000;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  font-size: 14px;
+  font-size: 1rem;
+  align-items: center;
+}
+.white-btn.fixed {
+  width: 150px;
+  height: auto;
 }
 .white-btn:hover {
   color: #ffff;
-  background-color: #027fff;
+  background-color: #1D2746;
 }
 .big-font {
   font-size: 150px;
@@ -102,14 +147,17 @@ p {
 .clr-red {
   color: #FD6252;
 }
-.padding-l-90 {
-  padding-left: 90px;
+.bg-blue {
+  background-color: #027fff;
 }
-.padding-l-40 {
-  padding-left: 40px;
+.bg-green {
+  background-color: #14A086;
 }
-.padding-r-90 {
-  padding-right: 90px;
+.bg-gray {
+  background-color: #E4E4E4;
+}
+.bg-light-gray {
+  background-color: #F5F5F5;
 }
 .content-border-box {
   background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -119,39 +167,8 @@ p {
   margin-top: 30px;
   font-size: 25px;
 }
-
-
-.block1 {
-  height: 100%;
-  overflow: hidden;
-  min-height: 270px;
-  border: 1px solid #ccc;
-  padding: 25px 25px;
-}
-.trans-04 {
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  -moz-transition: all .4s;
-  transition: all .4s;
-}
-.block1-show {
-  -webkit-transform: translateY(75px);
-  -moz-transform: translateY(75px);
-  -ms-transform: translateY(75px);
-  -o-transform: translateY(75px);
-  transform: translateY(75px);
-}
 .wrap-pic-s, .wrap-pic-max-s, .wrap-pic-w, .wrap-pic-max-w, .wrap-pic-h, .wrap-pic-max-h {
   display: block;
-}
-.block1-symbol {
-  height: 60px;
-  transform-origin: top center;
-  -webkit-transform: scale(1.58) translateY(-22px);
-  -moz-transform: scale(1.58) translateY(-22px);
-  -ms-transform: scale(1.58) translateY(-22px);
-  -o-transform: scale(1.58) translateY(-22px);
-  transform: scale(1.58) translateY(-22px);
 }
 .pos-relative {
   position: relative;
@@ -200,10 +217,183 @@ p {
 .cl-12 {
   color: #e5e5e5;
 }
-.block1:hover {
+.op-00 {
+  opacity: 0;
+}
+.m-all-23, .m-b-23, .m-tb-23 {
+  margin-bottom: 23px;
+}
+
+
+
+/* Style */         /*this section is for specific classes as required for various pages */
+.header {
+    position: fixed;      /*header bar is fixed on the top*/
+    width: 100%;
+    padding: 0px;
+    background-color: #fff;
+    z-index: 1000;
+  }
+.header .nav-item a {
+  color: #000000;
+  font-size: 1rem;
+  font-family: Roboto-Bold;
+  padding: 0 1em;
+}
+.header .nav-item a:hover {
+  color: #14A086;
+}
+.header .nav-item a.active {
+  color: #14A086;
+}
+.header .navbar-toggler:focus {
+  box-shadow: none;
+}
+.container {                    /*main container box*/
+  max-width: 1920px;
+  width: 100%;
+  margin: auto;
+}
+.container .width-1300 {      /*container box of 1,300 pixels*/
+  max-width: 1300px;
+}
+.container .width-1400 {      /*container box of 1,400 pixels*/
+  max-width: 1400px;
+}
+.logo-section {               /*logo section within container box, logo section shall not have its own padding*/
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+.logo-section .logo-box {         /*logo with a background, screen sizes aligned*/
+  max-width: 100px;
+  height: auto;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  padding: 0rem;
+}
+.logo-section .logo-box-white {     /*logo with no background, screen sizes aligned*/
+  max-width: 200px;
+  height: auto;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  padding: 0rem;
+}
+.hero-section {
+  background-color: #027FFF;
+}
+.hero-section h1 {    /*subsequent lines defines the colors of different fonts */
+  color: #ffff;
+}
+.hero-section h2 {
+  color: #ffff;
+}
+.hero-section h3 {
+  color: #ffff;
+}
+.hero-section p {
+  color: #ffff;
+}
+.hero-section img {
+  width: 100%;
+}
+.hero-section .btn-outer {    /*this for defining margins between text and buttons */
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.key-features-section {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.key-features-section .col-box-outer {
+  margin: 60px;
+}
+.key-features-section h3 {
+  font-family: Roboto-Bold;
+  color: #14A086;
+  margin-top: 20px;
+}
+.key-features-section .icon-box {
+  min-height: 150px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.heading-section {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 10px 30px #0449591A;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 30px 0;
+}
+.heading-section h6 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.home-about-section {   /*only top and bottom paddings are defined, left and right are customized for document and need not to be defined here */
+  padding-top: 66px;
+  padding-bottom: 66px;
+}
+.home-investment-section {        /*home investment section is now aligned in the document, this comment is to be deleted */
+  background-color: #F5F5F5;
+}
+.home-investment-section .left img {
+  object-fit: cover;
+  height: 100%;
+}
+.home-investment-section .accordion-list {
+  margin-top: 30px;
+}
+.home-investment-section .accordion-header {
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 10px 30px #0449591A;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.home-investment-section .accordion-header:hover {
+  box-shadow: 0px 1px 5px #14A086;
+}
+.home-investment-section .accordion-collapse {
+  box-shadow: 0px 10px 30px #0449591A;
+  border-radius: 4px;
+  margin-bottom: 0;
+}
+.home-investment-section .accordion-collapse li {
+  padding-top: .5em;
+}
+.home-investment-section .accordion-collapse li:first-child {
+  padding-top: 1em;
+}
+.home-investment-section .accordion-collapse li:last-child {
+  padding-bottom: 1em;
+}
+.home-services-section {      /*home service section is now aligned, just need to check for media query*/
+  padding: 0px;
+}
+.home-services-section .col-box {
+  border: 1px solid #CCCCCC;
+  padding: 50px 0;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+.home-services-section .col-box:hover {
+  background-color: #14A086;
+}
+.home-services-section .white-btn {
+  padding: .5em 1em;
+}
+.block1 {
   min-height: 270px;
-  background-color: #16a086;
-  border-color: #16a086;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #14a086;
+  padding: 1rem;
+}
+.block1:hover {
+  background-color: #14a086;
+  border-color: #14a086;
 }
 .block1:hover .block1-show {
   -webkit-transform: translateY(0px);
@@ -242,193 +432,42 @@ p {
 .block1:hover .block1-show p {
   display: none;
 }
-.op-00 {
-  opacity: 0;
+.trans-04 {
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
 }
-.m-all-23, .m-b-23, .m-tb-23 {
-  margin-bottom: 23px;
+.block1-show {
+  -webkit-transform: translateY(75px);
+  -moz-transform: translateY(75px);
+  -ms-transform: translateY(75px);
+  -o-transform: translateY(75px);
+  transform: translateY(75px);
 }
-.bg-blue {
-  background-color: #027fff;
-}
-.bg-green {
-  background-color: #14A086;
-}
-.bg-gray {
-  background-color: #E4E4E4;
-}
-.bg-light-gray {
-  background-color: #F5F5F5;
+.block1-symbol {
+  height: 60px;
+  transform-origin: top center;
+  -webkit-transform: scale(1.58) translateY(-22px);
+  -moz-transform: scale(1.58) translateY(-22px);
+  -ms-transform: scale(1.58) translateY(-22px);
+  -o-transform: scale(1.58) translateY(-22px);
+  transform: scale(1.58) translateY(-22px);
 }
 
-
-
-/* Style */
-.header {
-    position: fixed;
-    width: 100%;
-    padding: 0px;
-    background-color: #fff;
-  }
-.header .navbar-nav {
-  margin-top: 0px;
-}
-.header .nav-item a {
-  color: #000000;
-  font-size: 16px;
-  font-family: Roboto-Bold;
-  padding: 0 20px;
-}
-.header .nav-item a:hover {
-  color: #14A086;
-}
-.header .nav-item a.active {
-  color: #14A086;
-}
-.header .navbar-toggler:focus {
-  box-shadow: none;
-}
-.hero-section {
-  background-color: #027FFF;
-}
-.hero-section h1 {
-  color: #ffff;
-}
-.hero-section p {
-  color: #ffff;
-  font-size: 20px;
-}
-.hero-section img {
+.horizontal-image-tile-section .left img {        /*this section is now aligned, please check later on for mobile version*/
+  object-fit: cover;
+  object-position: left; 
   width: 100%;
-}
-.hero-section .left {
-  padding-left: 66px;
-  padding-right: 66px;
-}
-.hero-section .btn-outer {
-  margin-top: 10%;
-}
-
-.heading-section {
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  box-shadow: 0px 10px 30px #0449591A;
-  border-radius: 4px;
-  margin-top: 30px;
-  padding: 30px 0;
-}
-
-.heading-section h6 {
-  font-size: 18px;
-  margin-top: 20px;
-}
-.home-about-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.home-about-section p {
-  color: #000000;
-  font-size: 28px;
-}
-
-.home-investment-section {
-  background-color: #F5F5F5;
-}
-.home-investment-section .right {
-  padding: 38px 66px 60px 100px;
-}
-.home-investment-section .accordion-list {
-  margin-top: 30px;
-}
-.home-investment-section .accordion-header {
-  padding: 10px 20px;
-  background-color: #fff;
-  cursor: pointer;
-  box-shadow: 0px 10px 30px #0449591A;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-}
-.home-investment-section .accordion-header:hover {
-  box-shadow: 0px 1px 5px rgb(20 160 134 / 50%);
-}
-.home-investment-section .accordion-collapse {
-  box-shadow: 0px 10px 30px #0449591A;
-  border-radius: 4px;
-  margin-bottom: 0;
-  padding: 0 0 0 30px;
-}
-.home-investment-section .accordion-collapse li {
-  padding-top: 10px;
-}
-.home-investment-section .accordion-collapse li:first-child {
-  padding-top: 20px;
-}
-.home-investment-section .accordion-collapse li:last-child {
-  padding-bottom: 20px;
-}
-.home-investment-section .left img {
-  object-fit: cover;
-  height: 100%;
-}
-.home-services-section {
-  padding: 80px 0;
-}
-.home-services-section h3 {
-  margin-top: 20px;
-}
-.home-services-section .col-box {
-  border: 1px solid #CCCCCC;
-  padding: 50px 0;
-  transition: all 0.3s ease-in-out;
-  height: 100%;
-  display: grid;
-  align-items: center;
-}
-.home-services-section .col-box:hover {
-  background-color: #16A086;
-}
-.home-services-section .white-btn {
-  padding: 8px 20px;
-}
-.home-services-section .bottom-text {
-  font-size: 34px;
-  font-weight: 600;
-  margin-top: 60px;
-  display: block;
-}
-
-.home-why-us-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-top: 5px;
-}
-.home-why-us-section h2 {
-  margin-bottom: 50px;
-}
-.home-why-us-section .left img {
-  object-fit: cover;
-  height: 100%;
+  height:100%;
   border-radius: 10px;
 }
-.home-why-us-section .right img {
+.horizontal-image-tile-section .right img {
   background: rgb(255 255 255/10%);
-  padding: 10px;
+  padding: 0.5em;
   border-radius: 6px;
 }
-.home-why-us-section h3 {
-  color: #fff;
-  margin-top: 20px;
-}
-.home-why-us-section p {
-  color: #fff;
-  margin-top: 20px;
-}
-.home-why-us-section .bg-blue {
-  border-radius: 8px;
-  padding: 50px;
-  height: 100%;
-  transition: all 0.4s ease-in-out;
-}
-.home-why-us-section i.fa.fa-arrow-right {
+.horizontal-image-tile-section i.fa.fa-arrow-right {
   background: rgb(255 255 255 / 10%);
   color: #fff;
   padding: 6px;
@@ -436,20 +475,32 @@ p {
   width: 30px;
   height: 30px;
 }
-.home-why-us-section .bg-blue:hover {
+.horizontal-image-tile-section .bg-blue {
+  border-radius: 8px;
+  padding: 2em;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.horizontal-image-tile-section .bg-blue h3 {
+  color: #fff;
+}
+.horizontal-image-tile-section .bg-blue p {
+  color: #fff;
+}
+.horizontal-image-tile-section .bg-blue:hover {
   background: #fff;
   border: 1px solid #027fff;
 }
-.home-why-us-section .right .bg-blue:hover img {
+.horizontal-image-tile-section .bg-blue:hover img {
   background: #027fff;
 }
-.home-why-us-section .bg-blue:hover h3 {
+.horizontal-image-tile-section .bg-blue:hover h3 {
   color: #000000;
 }
-.home-why-us-section .bg-blue:hover p {
+.horizontal-image-tile-section .bg-blue:hover p {
   color: #000000;
 }
-.home-why-us-section .bg-blue:hover i.fa.fa-arrow-right {
+.horizontal-image-tile-section .bg-blue:hover i.fa.fa-arrow-right {
   background-color: #027fff;
 }
 
@@ -490,11 +541,7 @@ p {
 .testimonial-section .name {
   margin-left: 10px;
   font-size: 22px;
-  color: #16191C;
-}
-.testimonial-section p {
-  font-size: 16px;
-  color: #16191C;
+  color: #000000;
 }
 .testimonial-section .cutomer-details {
   margin-top: 5%;
@@ -532,51 +579,45 @@ p {
 
 .footer {
   background-color: #027FFF;
-  padding-top: 100px;
-  padding-bottom: 30px;
 }
 .footer h3 {
   color: #fff;
-  font-size: 33px;
 }
 .footer p {
-  color: #97BAFF;
-  font-size: 24px;
-  margin-top: 20px;
+  color: #fff;
 }
 .footer .right {
   flex-basis: 40%;
 }
 .footer input[type="email"] {
   background: transparent;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fff;
   border-radius: 12px 0 0 12px;
-  padding: 15px 20px;
   color: #fff;
-  flex-basis: 78%;
+  font-size: 18px;
+  padding: 10px;
   outline: 0;
+  flex-basis: 80%;
 }
 .footer ::placeholder {
   color: #fff;
 }
 .footer input[type="submit"] {
-  color: #3976EF;
-  font-size: 18px;
   background: #fff;
-  border: 1px #fff solid;
-  border-left: 0;
-  outline: 0;
-  padding: 10px;
-  flex-basis: 20%;
+  border: 1px solid #fff;
   border-radius: 0px 12px 12px 0px;
+  color: #027fff;
+  font-size: 18px;
+  padding: 10px;
+  outline: 0;
+  flex-basis: 20%;
   transition: all 0.3s ease-in-out;
 }
 .footer input[type="submit"]:hover {
-  color: #ffff;
+  color: #fff;
   background-color: #1D2746;
 }
 .footer .footer-nav a {
-  font-size: 24px;
   margin: 0 30px;
 }
 .footer .footer-nav a:hover {
@@ -856,40 +897,6 @@ p {
 .three-col-icon-section .bottom-text p {
   margin-top: 20px;
 }
-
-.key-features-section {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-.key-features-section .col-box-outer {
-  margin-top: 60px;
-}
-.key-features-section .logo-box {         /*screen sizes aligned*/
-  max-width: 100px;
-  height: auto;
-  background: #fff;
-  transition: all 0.3s ease-in-out;
-  padding-top: 0px;
-}
-.key-features-section .logo-box-white {     /*screen sizes aligned*/
-  max-width: 200px;
-  height: auto;
-  background: transparent;
-  transition: all 0.3s ease-in-out;
-  padding-top: 0px;
-}
-.key-features-section h3 {
-  font-family: Roboto-Bold;
-  color: #14A086;
-  margin-top: 20px;
-}
-.key-features-section .icon-box {
-  min-height: 150px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
 .project-timeline-section {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -1033,37 +1040,12 @@ p {
 /* media querry */
 
 @media (min-width: 1440px) {
-  h1 {
-    font-size: 48px ;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  .hero-section p {
-    font-size: 20px;
-  }
   .big-font {
     font-size: 100px;
   }
   .wrap-pic-max-s > img {
     max-width: 80px;
     max-height: 50px;
-  }
-  .footer .footer-nav a {
-    font-size: 20px;
-    margin: 0 20px;
-  }
-  .home-services-section .bottom-text {
-    font-size: 30px;
-  }
-  .home-why-us-section .left img {
-    object-position: left;
-  }
-  .home-why-us-section .bg-blue {
-    padding: 30px;
-  }
-  .footer p {
-    font-size: 20px;
   }
   .milestone-section p {
     font-size: 26px;
@@ -1091,8 +1073,7 @@ p {
   }
 
   .header .nav-item a {
-    font-size: 1em;
-    padding: 1em;
+    font-size: 1rem;
   }
   .key-features-section h3 {
     margin-top: 18px;
@@ -1100,10 +1081,10 @@ p {
   .key-features-section .icon-box {
     min-height: 100px;
   }
-  .key-features-section .logo-box {
+  .logo-section .logo-box {
     width: 100%;  
   }
-  .key-features-section .logo-box-white {
+  .logo-section .logo-box-white {
     width: 100%;  
   }
   .project-timeline-section .col-box-outer img {
@@ -1115,12 +1096,6 @@ p {
 }
 
 @media (min-width: 1320px) and (max-width: 1439.98px) {
-  h1 {
-    font-size: 45px ;
-  }
-  h2 {
-    font-size: 30px;
-  }
   .home-investment-section .accordion-header img {
     max-width: 50px;
     max-height: 30px;
@@ -1138,19 +1113,6 @@ p {
   .block1-symbol {
     height: 40px;
   }
-  .home-services-section .bottom-text {
-    font-size: 24px;
-  }
-  .home-why-us-section .bg-blue {
-    padding: 20px 15px;
-  }
-  .footer p {
-    font-size: 18px;
-  }
-  .footer .footer-nav a {
-    font-size: 18px;
-    margin: 0 16px;
-  }
   .footer .social-icons a i {
     width: 30px;
     height: 30px;
@@ -1164,8 +1126,7 @@ p {
   }
 
   .header .nav-item a {
-    font-size: 0.95em;
-    padding: 0.95em;
+    font-size: 0.95rem;
   }
   .testimonial-section .slick-slider::before {
     width: 60px;
@@ -1177,15 +1138,6 @@ p {
   }
   .testimonial-section .slide-item {
     padding-top: 20px;
-  }
-  .hero-section p {
-    font-size: 19px;
-  }
-  .home-about-section p {
-    font-size: 24px;
-  }
-  .footer h3 {
-    font-size: 30px;
   }
   .home-investment-section .right {
     padding-left: 70px;
@@ -1237,10 +1189,10 @@ p {
   .key-features-section h3 {
     margin-top: 16px;
   }
-  .key-features-section .logo-box {
+  .logo-section .logo-box {
     width: 95%;
   }
-  .key-features-section .logo-box-white {
+  .logo-section .logo-box-white {
     width: 95%;  
   }
   .key-features-section .icon-box {
@@ -1267,46 +1219,11 @@ p {
 }
 
 @media (min-width: 1200px) and (max-width: 1319.98px) {
-  h1{
-    font-size: 42px;
-  }
-  h2 {
-    font-size: 26px;
-  }
-  h3 {
-    font-size: 16px;
-  }
-  .hero-section p {
-    font-size: 17px;
-  }
-  .green-btn, .white-btn {
-    padding: 10px 20px;
-  }
-  .home-about-section p {
-    font-size: 22px;
-  }
   .home-investment-section .accordion-header {
     padding: 10px 15px;
   }
-  .home-services-section .bottom-text {
-    font-size: 20px;
-  }
-  .footer h3 {
-    font-size: 28px;
-  }
-  .footer p {
-    font-size: 16px;
-  }
-  .footer .right {
-    flex-basis: 50%;
-  }
-  .footer .footer-nav a {
-    font-size: 16px;
-    margin: 0 14px;
-  }
   .header .nav-item a {
-    font-size: 0.875em;
-    padding: 0.875em;
+    font-size: 0.875rem;
   }
   .testimonial-section .slick-arrow {
     width: 40px;
@@ -1324,13 +1241,6 @@ p {
   }
   .footer .footer-links-outer {
     margin-top: 70px;
-  }
-  .home-why-us-section .right img {
-    max-width: 50px;
-    max-height: 40px;
-  }
-  .home-why-us-section p {
-    margin-top: 10px;
   }
   .milestone-section .right {
     padding-left: 30px;
@@ -1372,10 +1282,10 @@ p {
   .project-timeline-section .date {
     font-size: 12px;
   }
-  .key-features-section .logo-box {
+  .logo-section .logo-box {
     width: 87.5%;
   }
-  .key-features-section .logo-box-white {
+  .logo-section .logo-box-white {
     width: 87.5%;  
   }
   .three-col-icon-section p {
@@ -1391,39 +1301,17 @@ p {
 }
 
 @media (min-width: 991px) and (max-width: 1199.98px) {
-  h1 {
-    font-size: 36px ;
-  }
-  .hero-section p {
-    font-size: 15px;
-  }
-  .container {
-    padding: 0 40px;
-  }
-  .hero-section .left {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
   .home-investment-section .right {
     padding: 40px;
   }
   .home-services-section {
     padding: 50px 0;
   }
-  .footer .footer-nav a {
-    font-size: 14px;
-    margin: 0 10px;
-  }
   .footer .social-icons a {
     margin-left: 10px;
   }
-  .home-services-section .bottom-text {
-    font-size: 18px;
-    margin-top: 30px;
-  }
   .header .nav-item a {
-    font-size: 0.76em;
-    padding: 0.76em;
+    font-size: 0.76rem;
   }
   .milestone-section p {
     font-size: 22px;
@@ -1442,59 +1330,25 @@ p {
   .milestone-section .heading {
     flex-basis: 35%;
   }
-  .key-features-section .logo-box {
+  .logo-section .logo-box {
     width: 76%;
   }
-  .key-features-section .logo-box-white {
+  .logo-section .logo-box-white {
     width: 76%;  
   }
 }
 
 
 @media (min-width: 767px) and (max-width: 990.98px) {
-  h1 {
-    font-size: 29px;
-  }
-  h2 {
-    font-size: 22px;
-  }
-  h3 {
-    font-size: 14px;
-  }
-  .container {
-    padding: 0 30px;
-  }
-  .hero-section .left {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
   .home-investment-section .right {
     padding: 30px;
-  }
-  .hero-section p {
-    font-size: 12px;
-  }
-  .home-about-section {
-    padding-top: 40px;
-    padding-bottom: 30px;
   }
   .home-investment-section .left img {
     max-height: 400px;
     width: 100%;
   }
-  .home-why-us-section .left img {
-    max-height: 400px;
-    width: 100%;
-  }
-  .footer .right {
-    flex-basis: 100%;
-  }
   .header .nav-item a {
-    font-size: 0.61em;
-    padding: 0.61em;
-  }
-  .header .nav-item:last-child a {
-    border-bottom: 0;
+    font-size: 0.61rem;
   }
   .milestone-section .title {
     font-size: 16px;
@@ -1556,42 +1410,20 @@ p {
   .heading-section h3 {
     font-size: 22px;
   }
-  .key-features-section .logo-box {
+  .logo-section .logo-box {
     width: 61%;
   }
-  .key-features-section .logo-box-white {
+  .logo-section .logo-box-white {
     width: 61%;  
   }
 }
 
 @media (min-width: 576px) and (max-width: 766.98px) {
-  h1 {
-    font-size: 22px;
-  }
-  h2 {
-    font-size: 20px;
-  }
   .container {
     padding: 0 15px;
   }
-  .hero-section .left {
-    padding: 30px 15px;
-  }
   .home-investment-section .right {
     padding: 30px 15px 40px;
-  }
-  .hero-section p {
-    font-size: 9px;
-  }
-  .hero-section p br {
-    display: none;
-  }
-  .home-about-section p {
-    font-size: 16px;
-  }
-  .home-about-section {
-    padding-top: 30px;
-    padding-bottom: 20px;
   }
   .home-investment-section .left img {
     max-height: 260px;
@@ -1600,12 +1432,8 @@ p {
     max-width: 30px;
     max-height: 20px;
   }
-  .home-services-section .bottom-text {
-    font-size: 16px;
-  }
   .header .nav-item a {
-    font-size: 0.46em;
-    padding: 0.46em;
+    font-size: 0.46rem;
   }
   .testimonial-section .slick-slider::before {
     width: 30px;
@@ -1745,10 +1573,10 @@ p {
   .key-features-section .col-box-outer {
     margin-top: 30px;
   }
-  .key-features-section .logo-box {
+  .logo-section .logo-box {
     width: 46%;
   }
-  .key-features-section .logo-box-white {
+  .logo-section .logo-box-white {
     width: 46%;  
   }
   .key-features-section .icon-box img {
@@ -1830,24 +1658,16 @@ p {
 }
 
 @media (max-width: 576px) {
-
-  h1 {
-    font-size: 19px;
-  }
-  .hero-section p {
-    font-size: 8px;
-  }
   .content-border-box {
     font-size: 20px;
   }
   .header .nav-item a {
-    font-size: 0.4em;
-    padding: 0.4em;
+    font-size: 0.4rem;
   }
-  .key-features-section .logo-box {
+  .logo-section .logo-box {
     width: 40%;
   }
-  .key-features-section .logo-box-white {
+  .logo-section .logo-box-white {
     width: 40%;
   }
 
